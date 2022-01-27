@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Sauvon</string>
+    <string name="title_chat">Chats</string>
+    <string name="title_explore">Subscriptions</string>
+    <string name="title_account">Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_incorrect_file_type">Incorrect file type</string>
+    <string name="error_bigger_file">File size is bigger than 10Mb</string>
+    <string name="error_general">Something went wrong.</string>
+
+    <string name="error_fail_crop_image">Fail to crop image</string>
+    <string name="error_smaller_image">Image is too small. Required image size 100x100 px</string>
+    <string name="permissions_not_granted">Cancelling, required permissions are not granted</string>
+
+    <string name="crop_image_menu_crop">Upload</string>
+    <string name="crop_image_activity_title">Profile</string>
+    <string name="search_title">search</string>
+    <string name="search_hint">search</string>
+    <string name="navigation_library">Library</string>
+    <string name="navigation_home">Home</string>
+</resources>

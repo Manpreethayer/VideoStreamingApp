@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#40E0D0</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#40E0D0</color>
+    <color name="primaryRed">#d50000</color>
+    <color name="primaryBlue">#004ecb</color>
+
+    <!--dark theme colours-->
+    <color name="primaryBlack">#121212</color>
+    <color name="surfaceOverlay">#344955</color>
+    <color name="blackThemeBlack">#000000</color>
+    <color name="primaryYellow">#F9AA33</color>
+    <color name="strokeLight">#EEF1F3</color>
+    <color name="textHighOpacity">#DEFFFFFF</color>
+    <color name="textMediumOpacity">#99FFFFFF</color>
+    <color name="textLowOpacity">#61FFFFFF</color>
+    <color name="cardFillOverlay">#0DADC0CB</color>
+
+
+    <color name="transparentWhite">#cccccc</color>
+    <color name="background">#dddddd</color>
+
+
+
+    <color name="button_color">#004445</color>
+    <color name="button_color1">#2C7873</color>
+    <color name="button_color2">#6FB98F</color>
+    <color name="button_color3">#18142F</color>
+    <color name="button_color4">#15DB95</color>
+</resources>

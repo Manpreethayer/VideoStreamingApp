@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@android:color/white">
+
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/songImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/songs_image_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:placeholderImage="@mipmap/cloud_music_icon" />
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:maxEms="10"
+        android:text="Song name"
+        android:fontFamily="@font/gilroy_bold"
+        android:textColor="@android:color/black"
+        fresco:layout_constraintStart_toEndOf="@+id/songImage"
+        fresco:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

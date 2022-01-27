@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@android:color/white">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/video_preview_Image"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/songs_image_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent"
+        fresco:placeholderImage="@mipmap/cloud_music_icon" />
+
+    <TextView
+        android:id="@+id/video_on_device_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="duration"
+        android:backgroundTint="#70000000"
+        android:textColor="@color/textHighOpacity"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        fresco:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

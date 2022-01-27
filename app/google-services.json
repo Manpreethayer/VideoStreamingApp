@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1063242357108",
+    "firebase_url": "https://teacher-97d45.firebaseio.com",
+    "project_id": "teacher-97d45",
+    "storage_bucket": "teacher-97d45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063242357108:android:00d90b952b44540b",
+        "android_client_info": {
+          "package_name": "com.example.hp.teacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063242357108-s7jhdu6gg2m5tdli174bhj4osf468thu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp.teacher",
+            "certificate_hash": "4733ac6cdfccf8d15216b9a62ed228a44258cd66"
+          }
+        },
+        {
+          "client_id": "1063242357108-p9djlk47agbe72qq46kt1fh10f5qjkjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVeT71v48vdShQ5F2S-YXjDOlGK3iGLOI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063242357108-p9djlk47agbe72qq46kt1fh10f5qjkjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

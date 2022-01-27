@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Camera.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/top_ratio_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/more_layout" />
+
+    <View
+        android:id="@+id/bottom_ratio_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/flash_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/flash_on"
+        android:onClick="FlashControl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/more_button"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_more"
+        android:onClick="onClickButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.example.hp.teacher.Camera.CustomCameraButton.CircleProgressBar
+        android:id="@+id/custom_progressBar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:transitionName="CameraToVideoTransition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:progress="0"
+        app:progressBarThickness="7dp" />
+
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/camera_switch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/switch_camera"
+        android:onClick="onClickButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/face_status_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Face Status"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/trigger_status_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true" />
+
+    <!--<Button-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/take_picture_button"-->
+    <!--android:text="Take Pic."-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/switch_cam_button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:onClick="onClickButtons"/>-->
+
+    <!--more layout-->
+
+    <ImageButton
+        android:id="@+id/sticker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickButtons"
+        android:src="@mipmap/sticker_icon"
+        app:layout_constraintStart_toEndOf="@+id/custom_progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progressBar" />
+
+    <ImageButton
+        android:id="@+id/filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickButtons"
+        android:src="@mipmap/filter_icon"
+        app:layout_constraintEnd_toStartOf="@+id/custom_progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/custom_progressBar" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="2dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:src="@mipmap/trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <include
+        android:id="@+id/more_layout"
+        layout="@layout/layout_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+
+    <!--stickers layout-->
+    <include
+        android:id="@+id/stickers_layout"
+        layout="@layout/layout_sticker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/custom_progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--filters layout-->
+    <include
+        android:id="@+id/filters_layout"
+        layout="@layout/layout_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/custom_progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--bulge layout-->
+
+
+</android.support.constraint.ConstraintLayout>

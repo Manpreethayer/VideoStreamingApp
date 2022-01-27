@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    android:background="@color/blackThemeBlack"
+    android:foreground="?android:attr/selectableItemBackground">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/user_single_image_people"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:transitionName="peopleImageTransition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@mipmap/profile_avatar" />
+
+    <TextView
+        android:id="@+id/people_display_name_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Display Name"
+        android:transitionName="peopleNameTransition"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/textHighOpacity"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/user_single_image_people"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/people_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/textMediumOpacity"
+            android:transitionName="peopleCountryTransition"
+            android:drawableStart="@drawable/loaction_icon"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toEndOf="@+id/user_single_image_people"
+            app:layout_constraintTop_toBottomOf="@+id/people_display_name_single" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

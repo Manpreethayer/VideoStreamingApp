@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@color/primaryBlack"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/chat_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/chat_Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"
+            android:background="@drawable/toolbar_background"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="showprofile"
+                android:paddingEnd="12dp"
+                android:paddingBottom="5dp"
+                >
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/custom_bar_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    fresco:placeholderImage="@mipmap/profile_avatar"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/chat_display_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Display Name"
+                    android:textColor="@color/textHighOpacity"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/custom_bar_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chat_last_seen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Last Seen"
+                    android:textColor="@color/textMediumOpacity"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/custom_bar_image"
+                    app:layout_constraintTop_toBottomOf="@+id/chat_display_name" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+   <!-- <include layout="@layout/app_bar"
+        android:id="@+id/chat_app_bar"
+        />
+-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/message_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:background="@color/primaryBlack"
+        android:layout_below="@+id/chat_app_bar"
+        android:layout_above="@+id/linearLayout"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/messages_list"
+            android:layout_below="@+id/card_detail"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/linearLayout">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/blackThemeBlack"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+
+        <ImageButton
+            android:id="@+id/chat_camera_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25"
+            android:padding="10dp"
+            android:background="@color/blackThemeBlack"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+        <EditText
+            android:id="@+id/chat_message_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:ems="10"
+            android:hint="Message..."
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:textCursorDrawable="@null"
+            android:cursorVisible="false"
+            android:padding="6dp"
+            android:background="@drawable/chat_editext"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <ImageButton
+            android:id="@+id/chat_send_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25"
+            android:background="@color/blackThemeBlack"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_send_black_24dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
